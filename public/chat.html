@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Chat App</title>
-        <link rel="icon", href="/img/favicon.png"> <!--rel -> relationship-->
+        <link rel="icon", href="/img/favicon.png"> 
         <link rel="stylesheet", href="/css/styles.css">
     </head>
     <body>
@@ -11,7 +11,7 @@
 
             </div>
             <div class="chat__main">
-                <div id="messages" class="chat__messages"></div>  <!--box format for new messages to be displayed-->
+                <div id="messages" class="chat__messages"></div> 
                 <div class="compose">
                     <form id="message-form">
                         <input name="message" placeholder="Message" required>
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <script id="message-template" type="text/html">  <!--template that will be rendered using mustache-->
+        <script id="message-template" type="text/html"> 
             <div class="message">
                 <p>
                     <span class="message__name">{{username}}</span>
@@ -32,13 +32,13 @@
             </div>
         </script>
 
-        <script id="location-template" type="text/html">  <!--template that will be rendered using mustache-->
+        <script id="location-template" type="text/html">  
             <div class="message">
                 <p>
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{createdAt}}</span>
                 </p>
-                <p><a href="{{url}}" target="_blank">My Location</a></p> <!--provide a hyperlink in <a> tag-->
+                <p><a href="{{url}}" target="_blank">My Location</a></p> 
             </div>
         </script>
 
@@ -55,8 +55,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script> <!--to render html page-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>  <!-- manipulate time-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script> <!--query selector-->
-        <!-- Client side version of the socket.io Library. 
-            Client side javascript will have access to all of the stuffs it need to setup communication-->
+        <!-- Client side version of the socket.io Library. -->
         <script src="/socket.io/socket.io.js"></script> 
         <!-- Client side script -->
         <script src="js/chat.js"></script>
